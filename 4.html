@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест От Далого - Этап 4</title>
+    <style>
+        body {
+            background-color: pink;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+            font-size: 30px;
+        }
+        input {
+            margin: 10px;
+            padding: 5px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>КВЕСТ ОТ ДАЛОГО - ЭТАП 4</h1>
+    <p style="text-align: center;">Переведите число 59 из десятичной системы счисления в троичную, а затем полученное число из троичной в двоичную. Интернетом пользоваться можно.</p>
+    <h2 style="text-align: center;">Ниже писать ответ</h2>
+    <input type="text" id="answer" placeholder="Введите ваш ответ">
+    <button onclick="checkAnswer()">Ответить</button>
+
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById('answer').value;
+
+            // Проверяем, является ли ответ верным
+            if (answer === '111011') {
+                window.location.href = '5.html'; // Перенаправляем на страницу 5.html, если ответ верный
+            } else {
+                alert('Ответ неверный');
+            }
+        }
+    </script>
+</body>
+</html>

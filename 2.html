@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Квест от Далого - Этап 2</title>
+<style>
+    body {
+        background-color: pink; /* Устанавливаем розовый фон */
+        text-align: center; /* Центрируем текст */
+        color: black; /* Цвет текста - черный */
+        font-size: 24px; /* Размер шрифта */
+    }
+    button {
+        background-color: pink; /* Цвет кнопки - розовый */
+        border: none;
+        color: white; /* Цвет текста на кнопке - белый */
+        padding: 10px 20px; /* Отступы кнопки */
+        font-size: 16px; /* Размер шрифта на кнопке */
+    }
+</style>
+</head>
+<body>
+    <h1>КВЕСТ ОТ ДАЛОГО - ЭТАП 2</h1>
+    <p>Решите загадку, напишите правильный ответ и нажмите на кнопку</p>
+    <p>Загадка: Что можно видеть с закрытыми глазами?</p>
+    <form id="answerForm">
+        <input type="text" id="answerInput" placeholder="Введите ваш ответ">
+        <button type="button" onclick="checkAnswer()">Ответить</button>
+    </form>
+    <p id="errorText" style="color: red; display: none;">Ответ неверный</p>
+    <script>
+        function checkAnswer() {
+            var answer = document.getElementById('answerInput').value.toLowerCase();
+            if (answer === 'сны') {
+                window.location.href = '3.html'; // Переход на третий этап при верном ответе
+            } else {
+                document.getElementById('errorText').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
